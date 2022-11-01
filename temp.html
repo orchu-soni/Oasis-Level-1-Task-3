@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+h1 {  
+    text-align: center;  
+    padding: 23px;  
+    background: linear-gradient(to right, #31453A , #4C6B5A ); 
+    color: white;  
+    }  
+
+h4{
+text-align: center; 
+font-family:Bahnschrift;
+font-size:20px; }
+
+  </style>
+</head>
+<body>
+
+<h1>Temperature Converter</h1>
+<h4>Type  a  value in the Fahrenheit field to convert the value to Celsius:</h4><br><br>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6" >
+  <p style="padding-left:250px;font-family:Brush Script MT;font-size:60px;">Fahrenheit</p>
+ <br>
+  <div class="container" style="border-radius:50%;background-image:url(img.jpg);height:400px;width:450px;">
+<br><br><br><br><br>
+  <p style="padding-left:90px;"><b><input style="font-size:30px;border-radius:50%;height:212px;width:212px;" id="f" type="number" placeholder="   Fahrenheit" oninput="fu(this.value)" onchange="fu(this.value)"></b></p>
+</div>
+</div>
+
+<div class="col-md-6">
+  <p style="padding-left:300px;font-family:Brush Script MT;font-size:60px;">Celcius</p><br>
+ 
+  <div class="container" style="border-radius:50%;background-image:url(img.jpg);height:400px;width:450px;">
+<br><br><br><br><br>
+  <p style="padding-left:90px;"><b><input style="font-size:30px;border-radius:50%;height:212px;width:212px;" id="c" type="number" placeholder="    Celcius" oninput="ge(this.value)" onchange="ge(this.value)"></b></p>
+</div></div>
+</div></div>
+
+<script>
+function fu(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("c").value=((valNum-32)/1.8).toFixed(3);
+}
+
+function ge(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("f").value=((valNum-32)/1.8).toFixed(3);
+}
+</script>
+
+</body>
+</html>
